@@ -50,8 +50,8 @@ public class StudentResource {
                 .buildAndExpand(savedStudent.getId())
                 .toUri();
 
-        return ResponseEntity.created(location)
-                .build();
+        return ResponseEntity.created(location).body(savedStudent);
+
 
     }
 
