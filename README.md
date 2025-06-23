@@ -1,59 +1,124 @@
-## Master Spring and Spring Boot
+# 🎓 Spring Boot Student REST API
 
-Master Spring and Spring Boot (5573 ratings, 36365 students) - [View on Udemy](https://links.in28minutes.com/sb)
+A simple and beginner-friendly Spring Boot REST API that manages student records using H2 in-memory database.
 
-[![Image](https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg "Master Spring Boot")](https://links.in28minutes.com/sb)
+---
+
+## 🚀 Features
+
+- 🧾 Create new students (`POST /students`)
+- 📄 Get all students (`GET /students`)
+- 🔍 Get student by ID (`GET /students/{id}`)
+- ❌ Delete student (`DELETE /students/{id}`)
+- 🔄 Update student (`PUT /students/{id}`) *(optional to add)*
+- ✅ Input validation using `@Valid` annotations
+- 🗃 In-memory H2 database with schema & sample data
+
+---
+
+## ⚙️ Tech Stack
+
+| Tool            | Description                        |
+|-----------------|------------------------------------|
+| 💻 Java         | Programming Language               |
+| ☕ Spring Boot   | Backend Framework                  |
+| 🛠 Maven         | Build Tool                         |
+| 💾 H2 Database  | In-memory DB for dev/test          |
+| 🧪 JUnit        | Unit Testing *(optional)*          |
+
+---
+
+## 📁 Project Structure
+
+src/
+└─ main/
+└─ java/
+└─ com.in28minutes.springboot.rest.example.student/
+├─ Student.java
+├─ StudentRepository.java
+└─ StudentResource.java
+└─ resources/
+├─ application.properties
+├─ schema.sql
+└─ data.sql
 
 
 
+---
 
-# Spring Boot Code Examples
+## 💡 How to Run
 
-All code examples for our website http://www.springboottutorial.com
+1. Clone the Repository:
+git clone https://github.com/Coderfaal/spring-boot-examples.git
 
-## Keep Learning Every Day
-- **1:** [FOLLOW](https://links.in28minutes.com/lin) Ranga on LinkedIn
+2.Open in IntelliJ or VS Code
 
-## Check Out Our Amazing ROADMAPS
-- **1:** [AWS Roadmap](https://github.com/in28minutes/roadmaps/blob/main/README.md#aws-roadmap)
-- **2:** [Azure Roadmap](https://github.com/in28minutes/roadmaps/blob/main/README.md#azure-roadmap)
-- **3:** [Google Cloud Roadmap](https://github.com/in28minutes/roadmaps/blob/main/README.md#google-cloud-roadmap)
-- **4:** [Cloud Beginner Roadmap](https://github.com/in28minutes/roadmaps/blob/main/README.md#cloud-beginner-roadmap)
-- **5:** [DevOps Roadmap](https://github.com/in28minutes/roadmaps/blob/main/README.md#devops-roadmap)
-- **6:** [Java Full Stack Roadmap](https://github.com/in28minutes/roadmaps/blob/main/README.md#java-full-stack-roadmap)
-- **7:** [Java Microservices Roadmap](https://github.com/in28minutes/roadmaps/blob/main/README.md#java-microservices-roadmap)
+3.Run the App
+mvn spring-boot:run
+
+4.Access Endpoints
+
+| Method | Endpoint         | Description          |
+| ------ | ---------------- | -------------------- |
+| GET    | `/students`      | Get all students     |
+| GET    | `/students/{id}` | Get student by ID    |
+| POST   | `/students`      | Add new student      |
+| DELETE | `/students/{id}` | Delete student by ID |
+
+---
+
+📬 Sample Request Body (POST)
+
+{
+  "name": "name",
+  "passportNumber": "IND1234567"
+}
+
+---
+
+📚 Learning Highlights
+✅ Spring Boot REST API development
+
+✅ @RestController, @GetMapping, @PostMapping, etc.
+
+✅ Handling JSON request/response with Jackson
+
+✅ Using @Autowired with Repository layer
+
+✅ Auto schema/data loading with H2 and schema.sql + data.sql
+
+---
+
+🎯 Enhancements (TODOs)
+ ➕ Add PUT /students/{id} for updates
+
+ 🧪 Add JUnit tests for controller & service
+
+ 🌐 Add Swagger UI documentation
+
+ 🎨 Connect with a frontend (React/Vue)
+
+ ☁️ Deploy to Render or Railway
+
+ ---
+
+ 🧠 Bonus Tips
+You can view H2 Console at:
+http://localhost:8080/h2-console
+(Make sure to enable it in application.properties)
+
+Use Postman or Thunder Client to test POST/DELETE endpoints easily.
 
 
+ ---
+
+ 🧑‍💻 Author
+Made with ❤️ by Falguni Nargund
+🔗 LinkedIn
 
 
-### Installing Eclipse & Embedded Maven
-- Installation Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
-- GIT Repository For Installation : https://github.com/in28minutes/getting-started-in-5-steps
-- PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
+ ---
 
-### Running Examples
-- Download the zip or clone the Git repository.
-- Unzip the zip file (if you downloaded one)
-- Open Command Prompt and Change directory (cd) to folder containing pom.xml
-- Open Eclipse 
-   - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
-   - Select the right project
-- Choose the Spring Boot Application file (search for @SpringBootApplication)
-- Right Click on the file and Run as Java Application
-- You are all Set
+ 🙏 Acknowledgement
+Thanks to in28minutes for the project base & tutorials.
 
-### Troubleshooting
-- Refer our TroubleShooting Guide - http://www.in28minutes.com/spring-boot-maven-eclipse-troubleshooting-guide-and-faq
-
-### Useful Links
-- Find out more about in28Minutes and our approach to creating great learning experience - The in28Minutes Way - http://www.in28minutes.com/the-in28minutes-way
-- Facebook  : https://www.facebook.com/in28Minutes​
-- Twitter   : https://twitter.com/in28Minutes​
-- YouTube   : https://www.youtube.com/rithustutorials​
-- Instagram : https://www.instagram.com/in28minutes/
-
-in28Minutes is creating amazing solutions for you to learn Spring Boot, Full Stack and the Cloud - Docker, Kubernetes, AWS, React, Angular etc. - [Check out all our courses here](https://github.com/in28minutes/learn)
-
-## Youtube Playlists - 500+ Videos
-
-[Click here - 30+ Playlists with 500+ Videos on Spring, Spring Boot, REST, Microservices and the Cloud](https://www.youtube.com/user/rithustutorials/playlists?view=1&sort=lad&flow=list)
